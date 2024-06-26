@@ -104,6 +104,9 @@ vim.opt.scrolloff = 10
 
 vim.opt.termguicolors = true
 
+-- Obsidian.nvim config
+vim.opt.conceallevel = 2
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
