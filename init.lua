@@ -149,6 +149,20 @@ require 'custom.mappings'
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
+vim.api.nvim_create_autocmd('VimEnter', {
+  callback = function()
+    -- Change hightligh for text inside single backticks in markdown files
+    vim.api.nvim_set_hl(0, '@markup.raw.markdown_inline', { link = 'Constant' })
+    -- Replaces concealed ``` from markdown codeblocks with an unicode symbol
+    vim.cmd [[
+      augroup MarkdownSyntaxMatch
+        autocmd!
+        autocmd FileType markdown syntax match @conceal /```/ conceal cchar=⋯
+      augroup END
+    ]]
+  end,
+})
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
