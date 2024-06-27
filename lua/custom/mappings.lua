@@ -40,7 +40,7 @@ map('v', '<leader>#', 'gc', { desc = 'comment toggle', remap = true })
 --   { desc = "telescope find all files" }
 -- )
 -- map('n', '<leader>fw', ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", { desc = 'Telescope live_grep_args' })
-map("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "Telescope [G]it [S]tatus" })
+map('n', '<leader>gs', '<cmd>Telescope git_status<CR>', { desc = 'Telescope [G]it [S]tatus' })
 
 -- terminal
 map('t', '<C-x>', '<C-\\><C-N>', { desc = 'terminal escape terminal mode' })
@@ -86,6 +86,10 @@ map('n', '<leader>oS', '<cmd> ObsidianSearch <CR>', { desc = 'Obsidian Search' }
 map('n', '<leader>on', '<cmd> ObsidianNew <CR>', { desc = 'Obsidian New' })
 map('n', '<leader>os', '<cmd> ObsidianQuickSwitch <CR>', { desc = 'Obsidian Quick Switch' })
 map('n', '<leader>of', '<cmd> ObsidianFollowLink <CR>', { desc = 'Obsidian Follow Link' })
+-----------
+
+map('n', '<A-right>', '<CMD>vsplit<CR>', { desc = 'Vertical Split' })
+map('n', '<A-down>', '<CMD>split<CR>', { desc = 'Horizontal Split' })
 
 map('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move Selection Up' })
 map('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move Selection Down' })
