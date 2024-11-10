@@ -20,7 +20,6 @@ map('n', '<S-TAB>', '<CMD>BufferLineCyclePrev<CR>', { desc = 'Cycle to previous 
 
 -- Comment
 map('n', '<leader>#', 'gcc', { desc = 'comment toggle', remap = true })
-map('v', '<leader>#', 'gc', { desc = 'comment toggle', remap = true })
 
 -- telescope
 -- map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
@@ -93,6 +92,6 @@ map('n', '<A-down>', '<CMD>split<CR>', { desc = 'Horizontal Split' })
 
 map('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move Selection Up' })
 map('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move Selection Down' })
-map('v', '<leader>d', [["_d]], { desc = 'Deletes without copying to register' })
+map('v', '<leader>dd', [["_d]], { desc = 'Deletes without copying to register' })
 
 return map
