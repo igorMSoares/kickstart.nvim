@@ -551,6 +551,7 @@ require('lazy').setup({
         tsserver = {},
         html = { filetypes = { 'html', 'templ' } },
         emmet_language_server = { filetypes = { 'html', 'templ' } },
+        volar = {},
         angularls = {},
         cssls = {},
         tailwindcss = {},
@@ -645,6 +646,7 @@ require('lazy').setup({
         javascript = { { 'prettier' } },
         typescript = { { 'prettier' } },
         html = { { 'prettier' } },
+        json = { { 'prettier' } },
         templ = { { 'templ' } },
       },
       formatters = {
