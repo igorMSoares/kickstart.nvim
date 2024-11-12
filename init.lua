@@ -701,11 +701,11 @@ require('lazy').setup({
         -- is found.
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
-        javascript = { { 'prettier' } },
-        typescript = { { 'prettier' } },
-        html = { { 'prettier' } },
-        json = { { 'prettier' } },
-        templ = { { 'templ' } },
+        javascript = {  'prettierd', 'prettier', stop_after_first = true },
+        typescript = { 'prettierd', 'prettier', stop_after_first = true },
+        html = { 'prettierd', 'prettier', stop_after_first = true },
+        json = { 'prettierd', 'prettier', stop_after_first = true },
+        templ = { 'templ' },
       },
       formatters = {
         prettier = {
