@@ -20,6 +20,7 @@ map('n', '<S-TAB>', '<CMD>BufferLineCyclePrev<CR>', { desc = 'Cycle to previous 
 
 -- Comment
 map('n', '<leader>#', 'gcc', { desc = 'comment toggle', remap = true })
+map('v', '<leader>#', 'gc', { desc = 'comment toggle', remap = true })
 
 -- telescope
 -- map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
