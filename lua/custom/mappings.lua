@@ -94,4 +94,7 @@ map('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move Selection Up' })
 map('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move Selection Down' })
 map('v', '<leader>dd', [["_d]], { desc = 'Deletes without copying to register' })
 
+-- Diagnostics
+map('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
+
 return map
