@@ -22,4 +22,5 @@ return {
       },
     },
   },
+  opts = require 'custom.configs.neo-tree',
 }
