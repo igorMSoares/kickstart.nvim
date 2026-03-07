@@ -611,18 +611,16 @@ require('lazy').setup({
         float = { border = 'rounded', source = 'if_many' },
         -- underline = true,
         underline = { severity = vim.diagnostic.severity.ERROR },
-        signs = vim.g.have_nerd_font
-            and {
-              text = {
-                -- [vim.diagnostic.severity.ERROR] = '󰅚 ',
-                [vim.diagnostic.severity.ERROR] = '✘',
-                [vim.diagnostic.severity.WARN] = '󰀪 ',
-                [vim.diagnostic.severity.INFO] = '󰋽 ',
-                --       [vim.diagnostic.severity.HINT] = '⚹',
-                [vim.diagnostic.severity.HINT] = '󰌶 ',
-              },
-            }
-          or {},
+        signs = vim.g.have_nerd_font and {
+          text = {
+            -- [vim.diagnostic.severity.ERROR] = '󰅚 ',
+            [vim.diagnostic.severity.ERROR] = '✘',
+            [vim.diagnostic.severity.WARN] = '󰀪 ',
+            [vim.diagnostic.severity.INFO] = '󰋽 ',
+            --       [vim.diagnostic.severity.HINT] = '⚹',
+            [vim.diagnostic.severity.HINT] = '󰌶 ',
+          },
+        } or {},
         virtual_text = false, -- Hide floating diagnostics
         -- virtual_text = {
         --   source = 'if_many',
@@ -779,7 +777,7 @@ require('lazy').setup({
         html = { 'prettierd', 'prettier', stop_after_first = true },
         json = { 'prettierd', 'prettier', stop_after_first = true },
         templ = { 'templ' },
-        sql = { 'sql-formatter' },
+        sql = { 'pg_format' },
         bash = { 'shfmt' },
         haskell = { 'ormolu' },
       },
@@ -787,9 +785,9 @@ require('lazy').setup({
         prettier = {
           prepend_args = require 'custom.configs.prettier',
         },
-        ['sql-formatter'] = {
-          command = 'sql-formatter',
-          args = { '-l', 'postgresql' },
+        pg_format = {
+          command = 'pg_format',
+          args = { '--comma-break', '--wrap-limit', '80', '--multiline', '--placeholder', 'ARRAY\\[.*?\\]' },
         },
       },
     },
